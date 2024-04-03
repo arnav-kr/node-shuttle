@@ -1,0 +1,27 @@
+name: Shuttle Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  if: "contains(github.event.head_commit.message, '[deploy]')"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: shuttle-hq/deploy-action@main
+        with:
+          deploy-key: ${{ secrets.SHUTTLE_API_KEY }}
+          working-directory: "backend"
+          name: "my-project"
+          allow-dirty: "true"
+          no-test: "true"
+          cargo-shuttle-version: "0.28.1"
+          secrets: |
+            NODE_ENV = '${{ secrets.NODE_ENV }}' || 'production'
+            DISCORD_TOKEN = '${{ secrets.DISCORD_TOKEN }}'
+            FIREBASE_SERVICE_ACCOUNT_JSON = '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}'
+            AES_IV = '${{ secrets.AES_IV }}'
+            AES_SALT = '${{ secrets.AES_SALT }}'

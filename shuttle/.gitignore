@@ -1,0 +1,9 @@
+test_sub.sh
+target*
+.env*
+Secrets*.toml
+.shuttle-storage
+release.sh
+os-dependencies/Cargo.lock
+../node_modules
+../.env
