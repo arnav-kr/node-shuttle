@@ -1,4 +1,4 @@
-<center><img src="node-shuttle.svg" width="100" alt="Node Shuttle"/></center>
+<p align="center"><img src="node-shuttle.svg" width="100" alt="Node Shuttle"/></p>
 <br/>
 
 # Node.js on shuttle.rs Template
