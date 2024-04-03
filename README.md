@@ -1,4 +1,12 @@
+<center><img src="node-shuttle.svg" width="100" alt="Node Shuttle"/></center>
+<br/>
+
 # Node.js on shuttle.rs Template
+This Template is a starting point for creating a Node.js project on the shuttle.rs. It is a simple discord bot template that can be used to create a discord bot using the discord.js library, or any other Node.js project.
+<br/>
+
+**Example of a bot running on shuttle.rs:**
+![Bot Running on shuttle.rs](example.png)
 
 ## Pre-requisites
 - [rust](https://www.rust-lang.org/tools/install) installed
@@ -36,7 +44,6 @@ Cosidering the deploy limit per day, the deploy workflow is opt-in by default i.
 > You can add or remove variables in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) file.\
 > This template requires the following environment variables to be set in the repository secrets:\
 > - `SHUTTLE_TOKEN`: The token to authenticate with the shuttle.rs server.\
-> - `NODE_ENV`: The project id of the shuttle.rs project.\
 > - `DISCORD_TOKEN`: The discord bot token.\
 > Not specifying them in the repository secrets will result in a failed deployment.
 
