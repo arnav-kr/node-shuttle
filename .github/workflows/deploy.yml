@@ -15,10 +15,9 @@ jobs:
       - uses: shuttle-hq/deploy-action@main
         with:
           deploy-key: ${{ secrets.SHUTTLE_API_KEY }}
-          name: "node-shuttle"
           allow-dirty: "true"
           no-test: "true"
           cargo-shuttle-version: "0.43.0"
           secrets: |
-            NODE_ENV = '${{ secrets.NODE_ENV }}' || 'production'
+            NODE_ENV = '${{ secrets.NODE_ENV }}'
             DISCORD_TOKEN = '${{ secrets.DISCORD_TOKEN }}'
