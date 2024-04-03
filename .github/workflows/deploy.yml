@@ -7,8 +7,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  if: "contains(github.event.head_commit.message, '[deploy]')"
   deploy:
+    name: "Deploy to Shuttle"
+    if: "contains(github.event.head_commit.message, '[deploy]')"
     runs-on: ubuntu-latest
     steps:
       - uses: shuttle-hq/deploy-action@main
@@ -22,6 +23,3 @@ jobs:
           secrets: |
             NODE_ENV = '${{ secrets.NODE_ENV }}' || 'production'
             DISCORD_TOKEN = '${{ secrets.DISCORD_TOKEN }}'
-            FIREBASE_SERVICE_ACCOUNT_JSON = '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}'
-            AES_IV = '${{ secrets.AES_IV }}'
-            AES_SALT = '${{ secrets.AES_SALT }}'
