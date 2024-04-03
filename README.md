@@ -22,6 +22,9 @@
   ```
 
 > [!NOTE]
+> First Deploy might take some time to finish (maybe a lot) but subsequent deploys will be faster.
+
+> [!NOTE]
 > `package.json` contains the `shuttle:` scripts to interact with the shuttle.rs server. You can use them to login, deploy, start, restart, and stop the server.
 
 
