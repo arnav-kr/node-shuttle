@@ -1,7 +1,7 @@
 test_sub.sh
 target*
 .env*
-Secrets*.toml
+Secrets.toml
 .shuttle-storage
 release.sh
 os-dependencies/Cargo.lock

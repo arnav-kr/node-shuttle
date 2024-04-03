@@ -40,8 +40,15 @@ Cosidering the deploy limit per day, the deploy workflow is opt-in by default i.
 > - `DISCORD_TOKEN`: The discord bot token.\
 > Not specifying them in the repository secrets will result in a failed deployment.
 
+> [!TIP]
+> To save your build hours, you may run the first deploy manually and then use the GitHub Actions to deploy the later changes.
+
+
 ## Development
 use general node workflow for development.
 
 ## License
 This project is licensed under the AGPL 3.0 License - see the [LICENSE](LICENSE) file for details
+
+## Author
+[Arnav Kumar (@arnav-kr)](https://github.com/arnav-kr)

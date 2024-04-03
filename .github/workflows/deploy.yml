@@ -19,5 +19,4 @@ jobs:
           no-test: "true"
           cargo-shuttle-version: "0.43.0"
           secrets: |
-            NODE_ENV = '${{ secrets.NODE_ENV }}'
             DISCORD_TOKEN = '${{ secrets.DISCORD_TOKEN }}'
