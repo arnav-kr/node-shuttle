@@ -35,14 +35,14 @@ use general node workflow for development.
 
 ## Adding to an existing project
 Copy the following files to your project:
-- [ ] [`Shuttle.toml`](Shuttle.toml) (rename names according to your project, include any additions assets here)
-- [ ] [`Cargo.toml`](Cargo.toml) (rename names according to your project)
-- [ ] [`src/main.rs`](src/main.rs)
-- [ ] [`shuttle_run.sh`](shuttle_run.sh)
-- [ ] [`shuttle_setup_container.sh`](shuttle_setup_container.sh)
-- [ ] add shuttle related entries to [`.gitignore`](.gitignore)
-- [ ] (optional) [`Secrets.example.toml`](Secrets.example.toml) (rename to `Secrets.toml` and add your environment variables)
-- [ ] (optional) [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) (if you want to deploy via GitHub Actions)
+- [x] [`Shuttle.toml`](Shuttle.toml) (rename names according to your project, include any additions assets here)
+- [x] [`Cargo.toml`](Cargo.toml) (rename names according to your project)
+- [x] [`src/main.rs`](src/main.rs)
+- [x] [`shuttle_run.sh`](shuttle_run.sh)
+- [x] [`shuttle_setup_container.sh`](shuttle_setup_container.sh)
+- [x] add shuttle related entries to [`.gitignore`](.gitignore)
+- [x] (optional) [`Secrets.example.toml`](Secrets.example.toml) (rename to `Secrets.toml` and add your environment variables)
+- [x] (optional) [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) (if you want to deploy via GitHub Actions)
 
 deploy the project using `npm run deploy`
 
