@@ -1,1 +1,10 @@
 name = "node-shuttle"
+
+# TODO: Add any addition assets that you want to be present in your shuttle instance
+[build]
+assets = [
+  "*.sh",
+  "*.json",
+  "*.toml",
+  "src/*"
+]

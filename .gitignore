@@ -1,5 +1,9 @@
-target
 node_modules
 .env
 config.json
 .vscode
+/target
+.shuttle-storage
+Secrets*.toml
+!Secrets.example.toml
+.shuttle*

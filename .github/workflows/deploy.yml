@@ -9,14 +9,9 @@ on:
 jobs:
   deploy:
     name: "Deploy to Shuttle"
-    if: "contains(github.event.head_commit.message, '[deploy]')"
     runs-on: ubuntu-latest
     steps:
-      - uses: shuttle-hq/deploy-action@main
+      - uses: shuttle-hq/deploy-action@v2
         with:
-          deploy-key: ${{ secrets.SHUTTLE_API_KEY }}
-          allow-dirty: "true"
-          no-test: "true"
-          cargo-shuttle-version: "0.43.0"
-          secrets: |
-            DISCORD_TOKEN = '${{ secrets.DISCORD_TOKEN }}'
+          shuttle-api-key: ${{ secrets.SHUTTLE_API_KEY }}
+          project-id: ${{ secrets.SHUTTLE_PROJECT_ID }}

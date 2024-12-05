@@ -2,27 +2,18 @@ use shuttle_runtime::tokio::time;
 use shuttle_runtime::SecretStore;
 use std::process::Command;
 
+// start a service to run the shuttle_run.sh bash script
 #[shuttle_runtime::main]
 #[allow(unused_must_use)]
 async fn shuttle_main(
     #[shuttle_runtime::Secrets] secrets: SecretStore,
 ) -> Result<MyService, shuttle_runtime::Error> {
-
-    // TODO: add necessary commands here
-    // npm install
-    Command::new("npm")
-        .arg("install")
-        .spawn()
-        .expect("Failed to install npm dependencies")
-        .wait();
-
-    // npm start
-    Command::new("npm")
-        .arg("start")
-        // environment variables from Secrets.toml
+    // run the project
+    Command::new("bash")
+        .arg("/app/shuttle_run.sh")
         .envs(secrets.clone().into_iter())
         .spawn()
-        .expect("Failed to start Node.js process")
+        .expect("Failed to start project")
         .wait();
 
     Ok(MyService {})
