@@ -1,3 +1,4 @@
+#!/bin/sh
 # actions to perform when the container starts
 
 # start the nodejs app

@@ -1,3 +1,4 @@
+#!/bin/sh
 # Addition dependencies or actions to do before the actual container starts
 
 # install nodejs (v23)
